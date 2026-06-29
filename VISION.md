@@ -1,0 +1,2 @@
+DevAgent no es solamente un asistente de IA. 
+Es el primer paso hacia una plataforma integral de ingeniería de software asistida por inteligencia artificial, diseñada para ayudar a comprender, mantener, modernizar y construir sistemas de cualquier tamaño, desde aplicaciones legacy hasta arquitecturas modernas basadas en microservicios.
