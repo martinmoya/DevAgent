@@ -1,10 +1,7 @@
-from rich.console import Console
+VERSION = "0.1.0"
 
-console = Console()
-
-def show_banner():
-    console.print()
-    console.print("=" * 60, style="cyan")
-    console.print("               DevAgent", style="bold green")
-    console.print("=" * 60, style="cyan")
-    console.print()
+def show():
+    print("=" * 60)
+    print(f"DevAgent v{VERSION}")
+    print("=" * 60)
+    print()

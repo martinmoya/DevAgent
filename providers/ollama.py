@@ -3,21 +3,17 @@ import ollama
 from config.settings import Settings
 from providers.base import BaseLLMProvider
 
-
 class OllamaProvider(BaseLLMProvider):
 
     def __init__(self):
-
         self.client = ollama.Client(
             host=Settings.OLLAMA_URL
         )
 
     def connect(self):
-
         pass
 
     def health(self):
-
         try:
             self.client.list()
             return True
@@ -25,7 +21,6 @@ class OllamaProvider(BaseLLMProvider):
             return False
 
     def list_models(self):
-
         models = self.client.list()
 
         return [
@@ -34,7 +29,6 @@ class OllamaProvider(BaseLLMProvider):
         ]
 
     def generate(self, prompt: str) -> str:
-
         response = self.client.chat(
             model=Settings.MODEL,
             messages=[

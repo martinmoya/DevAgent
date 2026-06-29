@@ -1,22 +1,18 @@
 from config.settings import Settings
 
-from providers.lmstudio import LMStudioProvider
-from providers.ollama import OllamaProvider
-
-
 class LLMFactory:
 
     @staticmethod
     def create():
-
         provider = Settings.PROVIDER.lower()
 
         if provider == "lmstudio":
+            from providers.lmstudio import LMStudioProvider
             return LMStudioProvider()
 
-        if provider == "ollama":
+        elif provider == "ollama":
+            from providers.ollama import OllamaProvider
             return OllamaProvider()
 
-        raise ValueError(
-            f"Proveedor no soportado: {provider}"
-        )
+        raise ValueError(f"Proveedor no soportado: {provider}")
+

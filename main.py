@@ -1,8 +1,16 @@
-from core.banner import show_banner
+from core.kernel import Kernel
 
 def main():
-    show_banner()
-    print("Bienvenido a DevAgent")
+
+    kernel = Kernel()
+
+    try:
+        kernel.initialize()
+        kernel.run()
+
+    finally:
+        kernel.shutdown()
 
 if __name__ == "__main__":
     main()
+    
